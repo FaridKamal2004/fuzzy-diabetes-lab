@@ -1,0 +1,13 @@
+{
+  "name": "fuzzy-diabetes-lab-web-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/browser-engine.test.mjs",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "@axe-core/playwright": "4.11.1"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "model_version": "2.0.0",
+  "dataset_sha256": "d765aa828a47e8d3ba2f4de925891be77803fd0e9568d7c213cdf10c8e83d0b2",
+  "rows": 768,
+  "class_counts": {
+    "1": 268,
+    "0": 500
+  },
+  "zero_counts": {
+    "Pregnancies": 111,
+    "Glucose": 5,
+    "BloodPressure": 35,
+    "SkinThickness": 227,
+    "Insulin": 374,
+    "BMI": 11,
+    "DiabetesPedigreeFunction": 0,
+    "Age": 0
+  },
+  "split": {
+    "method": "seeded stratified split; class-wise shuffle; round(n*0.2)",
+    "seed": 42,
+    "train": 614,
+    "test": 154,
+    "test_index_sha256": "c60f9373c51fcda8027751252e5e10bf15193f4f0f8bba400b0524e510f2bd68"
+  },
+  "train_fitted_medians": {
+    "Glucose": 116.0,
+    "BloodPressure": 72.0,
+    "SkinThickness": 29.0,
+    "Insulin": 125.0,
+    "BMI": 32.0
+  },
+  "holdout_imputed": {
+    "attempted": 154,
+    "scored": 154,
+    "abstained": 0,
+    "coverage": 1.0,
+    "accuracy_on_scored": 0.6753246753246753,
+    "correct_over_attempted": 0.6753246753246753,
+    "precision": 0.5285714285714286,
+    "recall": 0.6851851851851852,
+    "specificity": 0.67,
+    "f1": 0.5967741935483871,
+    "confusion_matrix": {
+      "tn": 67,
+      "fp": 33,
+      "fn": 17,
+      "tp": 37
+    },
+    "failures": {}
+  },
+  "holdout_strict": {
+    "attempted": 154,
+    "scored": 76,
+    "abstained": 78,
+    "coverage": 0.4935064935064935,
+    "accuracy_on_scored": 0.6842105263157895,
+    "correct_over_attempted": 0.33766233766233766,
+    "precision": 0.5333333333333333,
+    "recall": 0.6153846153846154,
+    "specificity": 0.72,
+    "f1": 0.5714285714285714,
+    "confusion_matrix": {
+      "tn": 36,
+      "fp": 14,
+      "fn": 10,
+      "tp": 16
+    },
+    "failures": {
+      "missing_input": 78
+    }
+  },
+  "holdout_majority_baseline": {
+    "attempted": 154,
+    "scored": 154,
+    "abstained": 0,
+    "coverage": 1.0,
+    "accuracy_on_scored": 0.6493506493506493,
+    "correct_over_attempted": 0.6493506493506493,
+    "precision": null,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "f1": 0.0,
+    "confusion_matrix": {
+      "tn": 100,
+      "fp": 0,
+      "fn": 54,
+      "tp": 0
+    }
+  },
+  "descriptive_full_data_legacy_zero_mode": {
+    "attempted": 768,
+    "scored": 764,
+    "abstained": 4,
+    "coverage": 0.9947916666666666,
+    "accuracy_on_scored": 0.7068062827225131,
+    "correct_over_attempted": 0.703125,
+    "precision": 0.561046511627907,
+    "recall": 0.7255639097744361,
+    "specificity": 0.6967871485943775,
+    "f1": 0.6327868852459017,
+    "confusion_matrix": {
+      "tn": 347,
+      "fp": 151,
+      "fn": 73,
+      "tp": 193
+    },
+    "failures": {
+      "no_rule_coverage": 4
+    }
+  },
+  "limitations": [
+    "Educational rule system, not a diagnosis or calibrated probability.",
+    "Rules were authored using the original project and dataset; this holdout is not untouched independent or clinical validation.",
+    "Only imputation medians are fitted on the training partition; rules and threshold are fixed.",
+    "Scores within 1e-12 of 0.5 use an explicit positive-class tie convention.",
+    "Raw dataset and row-level predictions are not published in the website."
+  ]
+}

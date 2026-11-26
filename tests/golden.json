@@ -1,0 +1,2734 @@
+[
+  {
+    "id": "synthetic-000",
+    "input": {
+      "Pregnancies": 2,
+      "Glucose": 0,
+      "BloodPressure": 72.143,
+      "SkinThickness": 94.74,
+      "Insulin": 93.271,
+      "BMI": 17.523,
+      "DiabetesPedigreeFunction": 1.563,
+      "Age": 65
+    },
+    "expected": {
+      "error": "missing_input"
+    }
+  },
+  {
+    "id": "synthetic-001",
+    "input": {
+      "Pregnancies": 13,
+      "Glucose": 115.493,
+      "BloodPressure": 102.545,
+      "SkinThickness": 84.725,
+      "Insulin": 676.172,
+      "BMI": 44.403,
+      "DiabetesPedigreeFunction": 0.624,
+      "Age": 101
+    },
+    "expected": {
+      "error": "out_of_range"
+    }
+  },
+  {
+    "id": "synthetic-002",
+    "input": {
+      "Pregnancies": 0,
+      "Glucose": 210,
+      "BloodPressure": 140,
+      "SkinThickness": 110,
+      "Insulin": 900,
+      "BMI": 75,
+      "DiabetesPedigreeFunction": 2.6,
+      "Age": 100
+    },
+    "expected": {
+      "error": "no_rule_coverage"
+    }
+  },
+  {
+    "id": "synthetic-003",
+    "input": {
+      "Pregnancies": 17,
+      "Glucose": 195.227,
+      "BloodPressure": 112.914,
+      "SkinThickness": 109.963,
+      "Insulin": 462.715,
+      "BMI": 6.648,
+      "DiabetesPedigreeFunction": 0.885,
+      "Age": 65
+    },
+    "expected": {
+      "score": 0.7120479829316613,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.7875000000000001,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-004",
+    "input": {
+      "Pregnancies": 5,
+      "Glucose": 96.607,
+      "BloodPressure": 122.83,
+      "SkinThickness": 77.733,
+      "Insulin": 520.104,
+      "BMI": 2.831,
+      "DiabetesPedigreeFunction": 1.848,
+      "Age": 49
+    },
+    "expected": {
+      "score": 0.38298490701473603,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 0.11310000000000002,
+        "Medium": 0.18877142857142856,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-005",
+    "input": {
+      "Pregnancies": 7,
+      "Glucose": 84.344,
+      "BloodPressure": 82.415,
+      "SkinThickness": 55.332,
+      "Insulin": 105.687,
+      "BMI": 38.471,
+      "DiabetesPedigreeFunction": 1.95,
+      "Age": 68
+    },
+    "expected": {
+      "score": 0.5966490884265515,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.5056666666666663,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-006",
+    "input": {
+      "Pregnancies": 8,
+      "Glucose": 192.602,
+      "BloodPressure": 36.951,
+      "SkinThickness": 46.776,
+      "Insulin": 833.684,
+      "BMI": 36.46,
+      "DiabetesPedigreeFunction": 1.347,
+      "Age": 22
+    },
+    "expected": {
+      "score": 0.8444444444444443,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-007",
+    "input": {
+      "Pregnancies": 4,
+      "Glucose": 27.961,
+      "BloodPressure": 7.795,
+      "SkinThickness": 77.808,
+      "Insulin": 798.255,
+      "BMI": 8.591,
+      "DiabetesPedigreeFunction": 1.618,
+      "Age": 58
+    },
+    "expected": {
+      "score": 0.15555555555555553,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-008",
+    "input": {
+      "Pregnancies": 8,
+      "Glucose": 48.846,
+      "BloodPressure": 124.143,
+      "SkinThickness": 69.307,
+      "Insulin": 411.66,
+      "BMI": 35.736,
+      "DiabetesPedigreeFunction": 2.417,
+      "Age": 99
+    },
+    "expected": {
+      "score": 0.8444444444444443,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-009",
+    "input": {
+      "Pregnancies": 9,
+      "Glucose": 117.997,
+      "BloodPressure": 94.096,
+      "SkinThickness": 34.531,
+      "Insulin": 720.022,
+      "BMI": 38.141,
+      "DiabetesPedigreeFunction": 1.245,
+      "Age": 91
+    },
+    "expected": {
+      "score": 0.7222449508984655,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.6064000000000003,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-010",
+    "input": {
+      "Pregnancies": 7,
+      "Glucose": 62.524,
+      "BloodPressure": 38.396,
+      "SkinThickness": 4.609,
+      "Insulin": 590.423,
+      "BMI": 45.198,
+      "DiabetesPedigreeFunction": 1.191,
+      "Age": 62
+    },
+    "expected": {
+      "score": 0.3779858786246862,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.2,
+        "High": 0.3820000000000001
+      }
+    }
+  },
+  {
+    "id": "synthetic-011",
+    "input": {
+      "Pregnancies": 8,
+      "Glucose": 193.596,
+      "BloodPressure": 37.155,
+      "SkinThickness": 53.927,
+      "Insulin": 460.629,
+      "BMI": 62.137,
+      "DiabetesPedigreeFunction": 2.101,
+      "Age": 65
+    },
+    "expected": {
+      "score": 0.8444444444444443,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-012",
+    "input": {
+      "Pregnancies": 15,
+      "Glucose": 174.763,
+      "BloodPressure": 45.015,
+      "SkinThickness": 100.932,
+      "Insulin": 89.438,
+      "BMI": 52.011,
+      "DiabetesPedigreeFunction": 2.041,
+      "Age": 61
+    },
+    "expected": {
+      "score": 0.7670346541892089,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.26666666666666666,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-013",
+    "input": {
+      "Pregnancies": 8,
+      "Glucose": 202.741,
+      "BloodPressure": 135.45,
+      "SkinThickness": 92.826,
+      "Insulin": 431.752,
+      "BMI": 5.758,
+      "DiabetesPedigreeFunction": 0.693,
+      "Age": 60
+    },
+    "expected": {
+      "score": 0.6887490983170118,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.7258999999999987,
+        "High": 0.7258999999999987
+      }
+    }
+  },
+  {
+    "id": "synthetic-014",
+    "input": {
+      "Pregnancies": 2,
+      "Glucose": 157.238,
+      "BloodPressure": 58.172,
+      "SkinThickness": 49.984,
+      "Insulin": 13.615,
+      "BMI": 1.016,
+      "DiabetesPedigreeFunction": 1.51,
+      "Age": 95
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.07891428571428573,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-015",
+    "input": {
+      "Pregnancies": 1,
+      "Glucose": 166.898,
+      "BloodPressure": 35.449,
+      "SkinThickness": 68.697,
+      "Insulin": 676.918,
+      "BMI": 71.771,
+      "DiabetesPedigreeFunction": 1.738,
+      "Age": 71
+    },
+    "expected": {
+      "score": 0.8444444444444443,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-016",
+    "input": {
+      "Pregnancies": 3,
+      "Glucose": 66.51,
+      "BloodPressure": 82.046,
+      "SkinThickness": 84.879,
+      "Insulin": 854.992,
+      "BMI": 37.407,
+      "DiabetesPedigreeFunction": 1.873,
+      "Age": 31
+    },
+    "expected": {
+      "score": 0.5143235463442718,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.9,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-017",
+    "input": {
+      "Pregnancies": 4,
+      "Glucose": 123.878,
+      "BloodPressure": 134.201,
+      "SkinThickness": 96.483,
+      "Insulin": 454.745,
+      "BMI": 7.248,
+      "DiabetesPedigreeFunction": 1.738,
+      "Age": 95
+    },
+    "expected": {
+      "score": 0.7082074392651013,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.9679428571428571,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-018",
+    "input": {
+      "Pregnancies": 13,
+      "Glucose": 192.238,
+      "BloodPressure": 43.535,
+      "SkinThickness": 45.912,
+      "Insulin": 727.387,
+      "BMI": 39.482,
+      "DiabetesPedigreeFunction": 0.511,
+      "Age": 21
+    },
+    "expected": {
+      "score": 0.7648359811493338,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.27749999999999997,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-019",
+    "input": {
+      "Pregnancies": 2,
+      "Glucose": 186.544,
+      "BloodPressure": 8.141,
+      "SkinThickness": 38.825,
+      "Insulin": 318.709,
+      "BMI": 57.945,
+      "DiabetesPedigreeFunction": 0.067,
+      "Age": 61
+    },
+    "expected": {
+      "score": 0.8444444444444443,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-020",
+    "input": {
+      "Pregnancies": 6,
+      "Glucose": 64.467,
+      "BloodPressure": 46.32,
+      "SkinThickness": 14.23,
+      "Insulin": 853.955,
+      "BMI": 43.3,
+      "DiabetesPedigreeFunction": 2.093,
+      "Age": 32
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-021",
+    "input": {
+      "Pregnancies": 9,
+      "Glucose": 91.624,
+      "BloodPressure": 47.762,
+      "SkinThickness": 66.206,
+      "Insulin": 610.97,
+      "BMI": 6.144,
+      "DiabetesPedigreeFunction": 1.038,
+      "Age": 36
+    },
+    "expected": {
+      "score": 0.224959349593496,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 0.4,
+        "Medium": 0.06666666666666667,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-022",
+    "input": {
+      "Pregnancies": 16,
+      "Glucose": 10.454,
+      "BloodPressure": 76.723,
+      "SkinThickness": 92.449,
+      "Insulin": 407.187,
+      "BMI": 56.849,
+      "DiabetesPedigreeFunction": 0.49,
+      "Age": 77
+    },
+    "expected": {
+      "score": 0.5166318215248431,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.8851333333333334,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-023",
+    "input": {
+      "Pregnancies": 15,
+      "Glucose": 27.99,
+      "BloodPressure": 74.661,
+      "SkinThickness": 86.61,
+      "Insulin": 465.651,
+      "BMI": 71.787,
+      "DiabetesPedigreeFunction": 0.417,
+      "Age": 88
+    },
+    "expected": {
+      "score": 0.47712456676574666,
+      "model_class": 0,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.9774,
+        "Medium": 0.0,
+        "High": 0.8282550000000001
+      }
+    }
+  },
+  {
+    "id": "synthetic-024",
+    "input": {
+      "Pregnancies": 7,
+      "Glucose": 89.899,
+      "BloodPressure": 58.558,
+      "SkinThickness": 9.574,
+      "Insulin": 275.113,
+      "BMI": 26.461,
+      "DiabetesPedigreeFunction": 0.685,
+      "Age": 60
+    },
+    "expected": {
+      "score": 0.3738044914139168,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 0.33669999999999994,
+        "Medium": 0.7125,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-025",
+    "input": {
+      "Pregnancies": 13,
+      "Glucose": 87.889,
+      "BloodPressure": 66.01,
+      "SkinThickness": 36.511,
+      "Insulin": 434.365,
+      "BMI": 9.888,
+      "DiabetesPedigreeFunction": 2.071,
+      "Age": 84
+    },
+    "expected": {
+      "score": 0.6279422933229545,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.4037000000000001,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-026",
+    "input": {
+      "Pregnancies": 14,
+      "Glucose": 178.205,
+      "BloodPressure": 33.156,
+      "SkinThickness": 104.95,
+      "Insulin": 790.88,
+      "BMI": 48.78,
+      "DiabetesPedigreeFunction": 1.061,
+      "Age": 83
+    },
+    "expected": {
+      "score": 0.7521651510867955,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.3475000000000001,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-027",
+    "input": {
+      "Pregnancies": 14,
+      "Glucose": 141.113,
+      "BloodPressure": 134.607,
+      "SkinThickness": 39.363,
+      "Insulin": 141.926,
+      "BMI": 42.588,
+      "DiabetesPedigreeFunction": 1.488,
+      "Age": 63
+    },
+    "expected": {
+      "score": 0.7260539116355775,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.5396285714285715,
+        "High": 0.976
+      }
+    }
+  },
+  {
+    "id": "synthetic-028",
+    "input": {
+      "Pregnancies": 2,
+      "Glucose": 150.647,
+      "BloodPressure": 78.256,
+      "SkinThickness": 62.917,
+      "Insulin": 193.777,
+      "BMI": 22.808,
+      "DiabetesPedigreeFunction": 0.697,
+      "Age": 64
+    },
+    "expected": {
+      "score": 0.6597277987243403,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.40114285714285713,
+        "High": 0.3548999999999997
+      }
+    }
+  },
+  {
+    "id": "synthetic-029",
+    "input": {
+      "Pregnancies": 2,
+      "Glucose": 56.116,
+      "BloodPressure": 133.728,
+      "SkinThickness": 19.669,
+      "Insulin": 616.408,
+      "BMI": 57.174,
+      "DiabetesPedigreeFunction": 1.878,
+      "Age": 35
+    },
+    "expected": {
+      "score": 0.5982456140350877,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.5,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-030",
+    "input": {
+      "Pregnancies": 11,
+      "Glucose": 106.885,
+      "BloodPressure": 39.473,
+      "SkinThickness": 92.276,
+      "Insulin": 262.641,
+      "BMI": 24.281,
+      "DiabetesPedigreeFunction": 0.678,
+      "Age": 25
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.6115714285714284,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-031",
+    "input": {
+      "Pregnancies": 7,
+      "Glucose": 188.693,
+      "BloodPressure": 108.972,
+      "SkinThickness": 46.184,
+      "Insulin": 14.872,
+      "BMI": 8.137,
+      "DiabetesPedigreeFunction": 0.06,
+      "Age": 30
+    },
+    "expected": {
+      "score": 0.44302600472813236,
+      "model_class": 0,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 0.6666666666666666
+      }
+    }
+  },
+  {
+    "id": "synthetic-032",
+    "input": {
+      "Pregnancies": 12,
+      "Glucose": 121.485,
+      "BloodPressure": 131.119,
+      "SkinThickness": 39.183,
+      "Insulin": 702.001,
+      "BMI": 45.937,
+      "DiabetesPedigreeFunction": 1.702,
+      "Age": 69
+    },
+    "expected": {
+      "score": 0.7089843946445593,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.8995714285714286,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-033",
+    "input": {
+      "Pregnancies": 16,
+      "Glucose": 67.057,
+      "BloodPressure": 30.973,
+      "SkinThickness": 51.431,
+      "Insulin": 881.222,
+      "BMI": 66.002,
+      "DiabetesPedigreeFunction": 1.785,
+      "Age": 89
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-034",
+    "input": {
+      "Pregnancies": 12,
+      "Glucose": 194.06,
+      "BloodPressure": 55.078,
+      "SkinThickness": 104.23,
+      "Insulin": 321.33,
+      "BMI": 55.419,
+      "DiabetesPedigreeFunction": 1.136,
+      "Age": 22
+    },
+    "expected": {
+      "score": 0.7922452107279694,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.16000000000000017,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-035",
+    "input": {
+      "Pregnancies": 12,
+      "Glucose": 61.517,
+      "BloodPressure": 134.202,
+      "SkinThickness": 88.183,
+      "Insulin": 110.961,
+      "BMI": 57.824,
+      "DiabetesPedigreeFunction": 0.829,
+      "Age": 92
+    },
+    "expected": {
+      "score": 0.8444444444444443,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-036",
+    "input": {
+      "Pregnancies": 9,
+      "Glucose": 72.579,
+      "BloodPressure": 78.96,
+      "SkinThickness": 79.663,
+      "Insulin": 102.225,
+      "BMI": 46.804,
+      "DiabetesPedigreeFunction": 0.308,
+      "Age": 30
+    },
+    "expected": {
+      "score": 0.5054872488059835,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.96,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-037",
+    "input": {
+      "Pregnancies": 6,
+      "Glucose": 136.41,
+      "BloodPressure": 92.156,
+      "SkinThickness": 4.139,
+      "Insulin": 520.736,
+      "BMI": 27.342,
+      "DiabetesPedigreeFunction": 0.999,
+      "Age": 39
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.674,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-038",
+    "input": {
+      "Pregnancies": 7,
+      "Glucose": 46.889,
+      "BloodPressure": 18.404,
+      "SkinThickness": 60.179,
+      "Insulin": 595.745,
+      "BMI": 70.165,
+      "DiabetesPedigreeFunction": 1.778,
+      "Age": 52
+    },
+    "expected": {
+      "score": 0.49641798431806977,
+      "model_class": 0,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.6666666666666666,
+        "High": 0.9669999999999987
+      }
+    }
+  },
+  {
+    "id": "synthetic-039",
+    "input": {
+      "Pregnancies": 4,
+      "Glucose": 31.866,
+      "BloodPressure": 4.247,
+      "SkinThickness": 31.175,
+      "Insulin": 431.48,
+      "BMI": 20.522,
+      "DiabetesPedigreeFunction": 0.818,
+      "Age": 96
+    },
+    "expected": {
+      "score": 0.4427716805934039,
+      "model_class": 0,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.07457142857142836,
+        "High": 0.6574000000000001
+      }
+    }
+  },
+  {
+    "id": "synthetic-040",
+    "input": {
+      "Pregnancies": 10,
+      "Glucose": 176.467,
+      "BloodPressure": 77.865,
+      "SkinThickness": 71.873,
+      "Insulin": 865.214,
+      "BMI": 39.039,
+      "DiabetesPedigreeFunction": 0.69,
+      "Age": 71
+    },
+    "expected": {
+      "score": 0.7147834524124549,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.7249999999999998,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-041",
+    "input": {
+      "Pregnancies": 13,
+      "Glucose": 67.357,
+      "BloodPressure": 92.444,
+      "SkinThickness": 2.244,
+      "Insulin": 880.338,
+      "BMI": 35.82,
+      "DiabetesPedigreeFunction": 2.523,
+      "Age": 74
+    },
+    "expected": {
+      "score": 0.46372239130566817,
+      "model_class": 0,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 0.7699999999999989
+      }
+    }
+  },
+  {
+    "id": "synthetic-042",
+    "input": {
+      "Pregnancies": 15,
+      "Glucose": 194.791,
+      "BloodPressure": 126.94,
+      "SkinThickness": 44.499,
+      "Insulin": 878.578,
+      "BMI": 71.374,
+      "DiabetesPedigreeFunction": 0.605,
+      "Age": 86
+    },
+    "expected": {
+      "score": 0.7306034993015604,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.5124999999999998,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-043",
+    "input": {
+      "Pregnancies": 6,
+      "Glucose": 43.005,
+      "BloodPressure": 50.916,
+      "SkinThickness": 70.434,
+      "Insulin": 494.367,
+      "BMI": 36.081,
+      "DiabetesPedigreeFunction": 2.05,
+      "Age": 66
+    },
+    "expected": {
+      "score": 0.5085045494230834,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.9389333333333335,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-044",
+    "input": {
+      "Pregnancies": 3,
+      "Glucose": 132.255,
+      "BloodPressure": 22.375,
+      "SkinThickness": 98.424,
+      "Insulin": 855.448,
+      "BMI": 61.218,
+      "DiabetesPedigreeFunction": 2.171,
+      "Age": 76
+    },
+    "expected": {
+      "score": 0.7118541462951811,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.7927142857142858,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-045",
+    "input": {
+      "Pregnancies": 14,
+      "Glucose": 134.575,
+      "BloodPressure": 12.705,
+      "SkinThickness": 41.635,
+      "Insulin": 658.176,
+      "BMI": 11.209,
+      "DiabetesPedigreeFunction": 1.923,
+      "Age": 100
+    },
+    "expected": {
+      "score": 0.7147122105969487,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.7264285714285718,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-046",
+    "input": {
+      "Pregnancies": 0,
+      "Glucose": 46.379,
+      "BloodPressure": 118.971,
+      "SkinThickness": 64.48,
+      "Insulin": 515.794,
+      "BMI": 71.71,
+      "DiabetesPedigreeFunction": 0.99,
+      "Age": 97
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-047",
+    "input": {
+      "Pregnancies": 9,
+      "Glucose": 135.606,
+      "BloodPressure": 22.968,
+      "SkinThickness": 56.455,
+      "Insulin": 77.898,
+      "BMI": 55.211,
+      "DiabetesPedigreeFunction": 0.867,
+      "Age": 41
+    },
+    "expected": {
+      "score": 0.7441837144003208,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.4,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-048",
+    "input": {
+      "Pregnancies": 1,
+      "Glucose": 124.879,
+      "BloodPressure": 110.427,
+      "SkinThickness": 18.681,
+      "Insulin": 264.329,
+      "BMI": 41.046,
+      "DiabetesPedigreeFunction": 0.929,
+      "Age": 98
+    },
+    "expected": {
+      "score": 0.7081206786014517,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.9965428571428573,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-049",
+    "input": {
+      "Pregnancies": 3,
+      "Glucose": 157.124,
+      "BloodPressure": 2.313,
+      "SkinThickness": 67.049,
+      "Insulin": 432.531,
+      "BMI": 32.276,
+      "DiabetesPedigreeFunction": 2.112,
+      "Age": 92
+    },
+    "expected": {
+      "score": 0.7713629949855535,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.2462857142857138,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-050",
+    "input": {
+      "Pregnancies": 17,
+      "Glucose": 209.333,
+      "BloodPressure": 24.753,
+      "SkinThickness": 57.265,
+      "Insulin": 162.481,
+      "BMI": 40.893,
+      "DiabetesPedigreeFunction": 0.426,
+      "Age": 91
+    },
+    "expected": {
+      "score": 0.820767083985394,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.06499999999999992,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-051",
+    "input": {
+      "Pregnancies": 9,
+      "Glucose": 185.406,
+      "BloodPressure": 90.433,
+      "SkinThickness": 1.217,
+      "Insulin": 337.727,
+      "BMI": 28.232,
+      "DiabetesPedigreeFunction": 0.562,
+      "Age": 32
+    },
+    "expected": {
+      "score": 0.7434834431258674,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.4050000000000001,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-052",
+    "input": {
+      "Pregnancies": 10,
+      "Glucose": 27.444,
+      "BloodPressure": 137.92,
+      "SkinThickness": 53.818,
+      "Insulin": 786.706,
+      "BMI": 54.77,
+      "DiabetesPedigreeFunction": 0.991,
+      "Age": 69
+    },
+    "expected": {
+      "score": 0.841466167770993,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.0,
+        "High": 0.9211999999999999
+      }
+    }
+  },
+  {
+    "id": "synthetic-053",
+    "input": {
+      "Pregnancies": 11,
+      "Glucose": 73.69,
+      "BloodPressure": 127.42,
+      "SkinThickness": 14.182,
+      "Insulin": 467.533,
+      "BMI": 62.32,
+      "DiabetesPedigreeFunction": 1.777,
+      "Age": 56
+    },
+    "expected": {
+      "score": 0.559537115410234,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.5818,
+        "Medium": 0.6,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-054",
+    "input": {
+      "Pregnancies": 10,
+      "Glucose": 18.253,
+      "BloodPressure": 109.287,
+      "SkinThickness": 10.577,
+      "Insulin": 445.837,
+      "BMI": 24.09,
+      "DiabetesPedigreeFunction": 1.959,
+      "Age": 38
+    },
+    "expected": {
+      "score": 0.2218867954677963,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 0.9423,
+        "Medium": 0.2,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-055",
+    "input": {
+      "Pregnancies": 6,
+      "Glucose": 106.811,
+      "BloodPressure": 47.108,
+      "SkinThickness": 99.875,
+      "Insulin": 651.74,
+      "BMI": 64.437,
+      "DiabetesPedigreeFunction": 1.048,
+      "Age": 34
+    },
+    "expected": {
+      "score": 0.7545296167247387,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.3333333333333333,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-056",
+    "input": {
+      "Pregnancies": 14,
+      "Glucose": 47.016,
+      "BloodPressure": 96.793,
+      "SkinThickness": 38.992,
+      "Insulin": 708.678,
+      "BMI": 31.318,
+      "DiabetesPedigreeFunction": 2.088,
+      "Age": 51
+    },
+    "expected": {
+      "score": 0.6015074595241718,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.9333333333333333,
+        "High": 0.2636000000000003
+      }
+    }
+  },
+  {
+    "id": "synthetic-057",
+    "input": {
+      "Pregnancies": 3,
+      "Glucose": 156.293,
+      "BloodPressure": 92.301,
+      "SkinThickness": 14.907,
+      "Insulin": 241.598,
+      "BMI": 62.838,
+      "DiabetesPedigreeFunction": 0.832,
+      "Age": 87
+    },
+    "expected": {
+      "score": 0.6777534491507152,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.5431000000000002,
+        "High": 0.5431000000000002
+      }
+    }
+  },
+  {
+    "id": "synthetic-058",
+    "input": {
+      "Pregnancies": 8,
+      "Glucose": 31.381,
+      "BloodPressure": 88.136,
+      "SkinThickness": 26.538,
+      "Insulin": 875.052,
+      "BMI": 42.536,
+      "DiabetesPedigreeFunction": 0.32,
+      "Age": 43
+    },
+    "expected": {
+      "score": 0.35633741386044737,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 0.8999999999999999,
+        "Medium": 0.5333333333333333,
+        "High": 0.20906666666666637
+      }
+    }
+  },
+  {
+    "id": "synthetic-059",
+    "input": {
+      "Pregnancies": 8,
+      "Glucose": 84.86,
+      "BloodPressure": 4.019,
+      "SkinThickness": 79.094,
+      "Insulin": 607.031,
+      "BMI": 25.926,
+      "DiabetesPedigreeFunction": 1.766,
+      "Age": 94
+    },
+    "expected": {
+      "score": 0.5714053414421777,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.5046666666666667,
+        "Medium": 0.8465714285714283,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-060",
+    "input": {
+      "Pregnancies": 15,
+      "Glucose": 178.097,
+      "BloodPressure": 133.429,
+      "SkinThickness": 73.771,
+      "Insulin": 492.224,
+      "BMI": 16.534,
+      "DiabetesPedigreeFunction": 0.916,
+      "Age": 46
+    },
+    "expected": {
+      "score": 0.714373752787886,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.7333333333333333,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-061",
+    "input": {
+      "Pregnancies": 16,
+      "Glucose": 152.407,
+      "BloodPressure": 2.462,
+      "SkinThickness": 61.922,
+      "Insulin": 227.704,
+      "BMI": 25.717,
+      "DiabetesPedigreeFunction": 1.675,
+      "Age": 53
+    },
+    "expected": {
+      "score": 0.6384699964846021,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.8167142857142855,
+        "High": 0.413566666666667
+      }
+    }
+  },
+  {
+    "id": "synthetic-062",
+    "input": {
+      "Pregnancies": 13,
+      "Glucose": 100.472,
+      "BloodPressure": 124.597,
+      "SkinThickness": 37.923,
+      "Insulin": 34.709,
+      "BMI": 17.27,
+      "DiabetesPedigreeFunction": 0.314,
+      "Age": 88
+    },
+    "expected": {
+      "score": 0.23936649910495,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.29919999999999985,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-063",
+    "input": {
+      "Pregnancies": 5,
+      "Glucose": 4.718,
+      "BloodPressure": 30.082,
+      "SkinThickness": 50.828,
+      "Insulin": 249.942,
+      "BMI": 47.633,
+      "DiabetesPedigreeFunction": 0.205,
+      "Age": 75
+    },
+    "expected": {
+      "score": 0.45447956736594763,
+      "model_class": 0,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 0.7218666666666669
+      }
+    }
+  },
+  {
+    "id": "synthetic-064",
+    "input": {
+      "Pregnancies": 9,
+      "Glucose": 3.381,
+      "BloodPressure": 14.287,
+      "SkinThickness": 36.968,
+      "Insulin": 198.244,
+      "BMI": 35.296,
+      "DiabetesPedigreeFunction": 1.576,
+      "Age": 34
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-065",
+    "input": {
+      "Pregnancies": 5,
+      "Glucose": 119.634,
+      "BloodPressure": 99.944,
+      "SkinThickness": 75.244,
+      "Insulin": 503.683,
+      "BMI": 8.996,
+      "DiabetesPedigreeFunction": 0.704,
+      "Age": 54
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.8466857142857143,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-066",
+    "input": {
+      "Pregnancies": 3,
+      "Glucose": 154.458,
+      "BloodPressure": 138.402,
+      "SkinThickness": 108.735,
+      "Insulin": 819.504,
+      "BMI": 49.683,
+      "DiabetesPedigreeFunction": 0.887,
+      "Age": 48
+    },
+    "expected": {
+      "score": 0.6521584909103696,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.7825000000000001,
+        "High": 0.48193333333333327
+      }
+    }
+  },
+  {
+    "id": "synthetic-067",
+    "input": {
+      "Pregnancies": 10,
+      "Glucose": 54.368,
+      "BloodPressure": 123.773,
+      "SkinThickness": 92.447,
+      "Insulin": 34.007,
+      "BMI": 37.26,
+      "DiabetesPedigreeFunction": 0.057,
+      "Age": 85
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-068",
+    "input": {
+      "Pregnancies": 4,
+      "Glucose": 158.787,
+      "BloodPressure": 28.624,
+      "SkinThickness": 30.826,
+      "Insulin": 758.18,
+      "BMI": 30.595,
+      "DiabetesPedigreeFunction": 0.568,
+      "Age": 24
+    },
+    "expected": {
+      "score": 0.695691013021487,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.4864285714285716,
+        "High": 0.6262333333333335
+      }
+    }
+  },
+  {
+    "id": "synthetic-069",
+    "input": {
+      "Pregnancies": 7,
+      "Glucose": 14.492,
+      "BloodPressure": 101.367,
+      "SkinThickness": 73.066,
+      "Insulin": 614.169,
+      "BMI": 57.673,
+      "DiabetesPedigreeFunction": 0.776,
+      "Age": 59
+    },
+    "expected": {
+      "score": 0.7441837144003208,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.4,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-070",
+    "input": {
+      "Pregnancies": 2,
+      "Glucose": 107.514,
+      "BloodPressure": 73.62,
+      "SkinThickness": 36.436,
+      "Insulin": 286.824,
+      "BMI": 26.131,
+      "DiabetesPedigreeFunction": 0.471,
+      "Age": 99
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.8758571428571429,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-071",
+    "input": {
+      "Pregnancies": 15,
+      "Glucose": 37.439,
+      "BloodPressure": 36.791,
+      "SkinThickness": 104.275,
+      "Insulin": 784.507,
+      "BMI": 39.52,
+      "DiabetesPedigreeFunction": 0.995,
+      "Age": 29
+    },
+    "expected": {
+      "score": 0.4210803939498134,
+      "model_class": 0,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 0.5724999999999995
+      }
+    }
+  },
+  {
+    "id": "synthetic-072",
+    "input": {
+      "Pregnancies": 10,
+      "Glucose": 45.902,
+      "BloodPressure": 65.47,
+      "SkinThickness": 23.854,
+      "Insulin": 457.723,
+      "BMI": 39.967,
+      "DiabetesPedigreeFunction": 1.336,
+      "Age": 83
+    },
+    "expected": {
+      "score": 0.6115487970184406,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.3646666666666666,
+        "Medium": 0.0,
+        "High": 0.7886150000000001
+      }
+    }
+  },
+  {
+    "id": "synthetic-073",
+    "input": {
+      "Pregnancies": 5,
+      "Glucose": 183.626,
+      "BloodPressure": 68.913,
+      "SkinThickness": 61.919,
+      "Insulin": 756.685,
+      "BMI": 25.106,
+      "DiabetesPedigreeFunction": 2.593,
+      "Age": 51
+    },
+    "expected": {
+      "score": 0.7145639622078604,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.7294285714285716,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-074",
+    "input": {
+      "Pregnancies": 10,
+      "Glucose": 113.671,
+      "BloodPressure": 22.127,
+      "SkinThickness": 61.093,
+      "Insulin": 881.796,
+      "BMI": 54.927,
+      "DiabetesPedigreeFunction": 0.341,
+      "Age": 85
+    },
+    "expected": {
+      "score": 0.8444444444444443,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-075",
+    "input": {
+      "Pregnancies": 11,
+      "Glucose": 13.765,
+      "BloodPressure": 93.663,
+      "SkinThickness": 4.763,
+      "Insulin": 710.771,
+      "BMI": 70.632,
+      "DiabetesPedigreeFunction": 0.465,
+      "Age": 41
+    },
+    "expected": {
+      "score": 0.43565565257512723,
+      "model_class": 0,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.4,
+        "High": 0.5775333333333331
+      }
+    }
+  },
+  {
+    "id": "synthetic-076",
+    "input": {
+      "Pregnancies": 9,
+      "Glucose": 75.54,
+      "BloodPressure": 64.564,
+      "SkinThickness": 21.336,
+      "Insulin": 49.225,
+      "BMI": 14.737,
+      "DiabetesPedigreeFunction": 0.4,
+      "Age": 71
+    },
+    "expected": {
+      "score": 0.15555555555555553,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-077",
+    "input": {
+      "Pregnancies": 8,
+      "Glucose": 115.129,
+      "BloodPressure": 5.032,
+      "SkinThickness": 25.082,
+      "Insulin": 328.377,
+      "BMI": 41.163,
+      "DiabetesPedigreeFunction": 1.211,
+      "Age": 80
+    },
+    "expected": {
+      "score": 0.6710984984498622,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.42200000000000015,
+        "High": 0.42200000000000015
+      }
+    }
+  },
+  {
+    "id": "synthetic-078",
+    "input": {
+      "Pregnancies": 3,
+      "Glucose": 68.821,
+      "BloodPressure": 100.36,
+      "SkinThickness": 5.39,
+      "Insulin": 7.801,
+      "BMI": 8.005,
+      "DiabetesPedigreeFunction": 1.524,
+      "Age": 76
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-079",
+    "input": {
+      "Pregnancies": 14,
+      "Glucose": 54.761,
+      "BloodPressure": 106.189,
+      "SkinThickness": 18.855,
+      "Insulin": 173.003,
+      "BMI": 61.418,
+      "DiabetesPedigreeFunction": 1.099,
+      "Age": 55
+    },
+    "expected": {
+      "score": 0.6780329959061477,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.11449999999999996,
+        "Medium": 0.6666666666666666,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-080",
+    "input": {
+      "Pregnancies": 14,
+      "Glucose": 36.67,
+      "BloodPressure": 32.227,
+      "SkinThickness": 106.504,
+      "Insulin": 192.23,
+      "BMI": 12.73,
+      "DiabetesPedigreeFunction": 2.579,
+      "Age": 54
+    },
+    "expected": {
+      "score": 0.28562624721211416,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.7333333333333333,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-081",
+    "input": {
+      "Pregnancies": 7,
+      "Glucose": 179.939,
+      "BloodPressure": 99.001,
+      "SkinThickness": 106.559,
+      "Insulin": 566.782,
+      "BMI": 33.595,
+      "DiabetesPedigreeFunction": 2.465,
+      "Age": 69
+    },
+    "expected": {
+      "score": 0.8231876199050405,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.05785714285714302,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-082",
+    "input": {
+      "Pregnancies": 2,
+      "Glucose": 188.459,
+      "BloodPressure": 103.728,
+      "SkinThickness": 13.628,
+      "Insulin": 71.858,
+      "BMI": 53.896,
+      "DiabetesPedigreeFunction": 1.618,
+      "Age": 33
+    },
+    "expected": {
+      "score": 0.8444444444444443,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-083",
+    "input": {
+      "Pregnancies": 3,
+      "Glucose": 134.991,
+      "BloodPressure": 27.313,
+      "SkinThickness": 104.332,
+      "Insulin": 884.751,
+      "BMI": 3.257,
+      "DiabetesPedigreeFunction": 2.525,
+      "Age": 72
+    },
+    "expected": {
+      "score": 0.6920398936118071,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.7145428571428567,
+        "High": 0.7500000000000011
+      }
+    }
+  },
+  {
+    "id": "synthetic-084",
+    "input": {
+      "Pregnancies": 16,
+      "Glucose": 165.995,
+      "BloodPressure": 40.909,
+      "SkinThickness": 40.81,
+      "Insulin": 9.56,
+      "BMI": 39.555,
+      "DiabetesPedigreeFunction": 2.306,
+      "Age": 87
+    },
+    "expected": {
+      "score": 0.8444444444444443,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-085",
+    "input": {
+      "Pregnancies": 8,
+      "Glucose": 29.831,
+      "BloodPressure": 111.273,
+      "SkinThickness": 62.001,
+      "Insulin": 872.735,
+      "BMI": 34.745,
+      "DiabetesPedigreeFunction": 1.582,
+      "Age": 67
+    },
+    "expected": {
+      "score": 0.8425302960777887,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.0,
+        "High": 0.9489999999999995
+      }
+    }
+  },
+  {
+    "id": "synthetic-086",
+    "input": {
+      "Pregnancies": 16,
+      "Glucose": 141.034,
+      "BloodPressure": 46.349,
+      "SkinThickness": 28.779,
+      "Insulin": 614.144,
+      "BMI": 35.113,
+      "DiabetesPedigreeFunction": 0.899,
+      "Age": 86
+    },
+    "expected": {
+      "score": 0.8314170647247108,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.034466666666666396,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-087",
+    "input": {
+      "Pregnancies": 9,
+      "Glucose": 111.835,
+      "BloodPressure": 14.665,
+      "SkinThickness": 31.097,
+      "Insulin": 34.47,
+      "BMI": 44.675,
+      "DiabetesPedigreeFunction": 0.183,
+      "Age": 94
+    },
+    "expected": {
+      "error": "no_rule_coverage"
+    }
+  },
+  {
+    "id": "synthetic-088",
+    "input": {
+      "Pregnancies": 10,
+      "Glucose": 81.723,
+      "BloodPressure": 90.72,
+      "SkinThickness": 63.672,
+      "Insulin": 411.811,
+      "BMI": 36.419,
+      "DiabetesPedigreeFunction": 0.057,
+      "Age": 92
+    },
+    "expected": {
+      "score": 0.5699686476503087,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.6092333333333334,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-089",
+    "input": {
+      "Pregnancies": 2,
+      "Glucose": 22.977,
+      "BloodPressure": 13.768,
+      "SkinThickness": 59.29,
+      "Insulin": 230.198,
+      "BMI": 72.918,
+      "DiabetesPedigreeFunction": 1.947,
+      "Age": 26
+    },
+    "expected": {
+      "score": 0.3762735094335783,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 0.4163999999999987
+      }
+    }
+  },
+  {
+    "id": "synthetic-090",
+    "input": {
+      "Pregnancies": 10,
+      "Glucose": 26.012,
+      "BloodPressure": 134.98,
+      "SkinThickness": 99.654,
+      "Insulin": 645.796,
+      "BMI": 23.72,
+      "DiabetesPedigreeFunction": 1.224,
+      "Age": 46
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.7333333333333333,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-091",
+    "input": {
+      "Pregnancies": 15,
+      "Glucose": 145.305,
+      "BloodPressure": 56.605,
+      "SkinThickness": 57.036,
+      "Insulin": 763.744,
+      "BMI": 31.996,
+      "DiabetesPedigreeFunction": 1.271,
+      "Age": 68
+    },
+    "expected": {
+      "score": 0.7241217787931173,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.41985714285714265,
+        "High": 0.8
+      }
+    }
+  },
+  {
+    "id": "synthetic-092",
+    "input": {
+      "Pregnancies": 7,
+      "Glucose": 161.677,
+      "BloodPressure": 82.784,
+      "SkinThickness": 65.37,
+      "Insulin": 435.07,
+      "BMI": 2.21,
+      "DiabetesPedigreeFunction": 2.458,
+      "Age": 51
+    },
+    "expected": {
+      "score": 0.6917385296623286,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.6666666666666666,
+        "High": 0.7225666666666665
+      }
+    }
+  },
+  {
+    "id": "synthetic-093",
+    "input": {
+      "Pregnancies": 1,
+      "Glucose": 98.273,
+      "BloodPressure": 20.5,
+      "SkinThickness": 27.273,
+      "Insulin": 469.693,
+      "BMI": 20.781,
+      "DiabetesPedigreeFunction": 1.122,
+      "Age": 79
+    },
+    "expected": {
+      "score": 0.7319856673726794,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.057566666666666794,
+        "Medium": 0.23637142857142845,
+        "High": 0.8484649999999999
+      }
+    }
+  },
+  {
+    "id": "synthetic-094",
+    "input": {
+      "Pregnancies": 0,
+      "Glucose": 126.863,
+      "BloodPressure": 73.281,
+      "SkinThickness": 104.897,
+      "Insulin": 110.828,
+      "BMI": 28.268,
+      "DiabetesPedigreeFunction": 0.564,
+      "Age": 26
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.8188571428571427,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-095",
+    "input": {
+      "Pregnancies": 3,
+      "Glucose": 85.729,
+      "BloodPressure": 16.437,
+      "SkinThickness": 12.517,
+      "Insulin": 890.956,
+      "BMI": 30.668,
+      "DiabetesPedigreeFunction": 0.015,
+      "Age": 36
+    },
+    "expected": {
+      "score": 0.17728514390564556,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 0.4757,
+        "Medium": 0.0,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-096",
+    "input": {
+      "Pregnancies": 4,
+      "Glucose": 168.284,
+      "BloodPressure": 73.936,
+      "SkinThickness": 100.426,
+      "Insulin": 77.012,
+      "BMI": 13.405,
+      "DiabetesPedigreeFunction": 2.37,
+      "Age": 37
+    },
+    "expected": {
+      "score": 0.6025521589706544,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.45976,
+        "Medium": 0.0,
+        "High": 0.9427999999999997
+      }
+    }
+  },
+  {
+    "id": "synthetic-097",
+    "input": {
+      "Pregnancies": 14,
+      "Glucose": 168.842,
+      "BloodPressure": 79.165,
+      "SkinThickness": 99.034,
+      "Insulin": 495.18,
+      "BMI": 3.632,
+      "DiabetesPedigreeFunction": 2.496,
+      "Age": 98
+    },
+    "expected": {
+      "score": 0.8444444444444443,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-098",
+    "input": {
+      "Pregnancies": 12,
+      "Glucose": 176.747,
+      "BloodPressure": 72.653,
+      "SkinThickness": 102.804,
+      "Insulin": 861.317,
+      "BMI": 67.757,
+      "DiabetesPedigreeFunction": 2.515,
+      "Age": 72
+    },
+    "expected": {
+      "score": 0.8444444444444443,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-099",
+    "input": {
+      "Pregnancies": 17,
+      "Glucose": 10.826,
+      "BloodPressure": 13.661,
+      "SkinThickness": 72.054,
+      "Insulin": 251.931,
+      "BMI": 1.54,
+      "DiabetesPedigreeFunction": 1.606,
+      "Age": 23
+    },
+    "expected": {
+      "score": 0.15555555555555553,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-100",
+    "input": {
+      "Pregnancies": 16,
+      "Glucose": 15.904,
+      "BloodPressure": 98.398,
+      "SkinThickness": 60.572,
+      "Insulin": 493.161,
+      "BMI": 39.235,
+      "DiabetesPedigreeFunction": 1.405,
+      "Age": 60
+    },
+    "expected": {
+      "score": 0.7545296167247387,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.3333333333333333,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-101",
+    "input": {
+      "Pregnancies": 1,
+      "Glucose": 74.571,
+      "BloodPressure": 75.61,
+      "SkinThickness": 51.579,
+      "Insulin": 218.816,
+      "BMI": 2.12,
+      "DiabetesPedigreeFunction": 1.003,
+      "Age": 27
+    },
+    "expected": {
+      "score": 0.15555555555555553,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-102",
+    "input": {
+      "Pregnancies": 11,
+      "Glucose": 38.3,
+      "BloodPressure": 33.927,
+      "SkinThickness": 61.95,
+      "Insulin": 454.858,
+      "BMI": 25.945,
+      "DiabetesPedigreeFunction": 0.725,
+      "Age": 72
+    },
+    "expected": {
+      "score": 0.4729131698102392,
+      "model_class": 0,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.8492857142857143,
+        "High": 0.77429
+      }
+    }
+  },
+  {
+    "id": "synthetic-103",
+    "input": {
+      "Pregnancies": 3,
+      "Glucose": 20.315,
+      "BloodPressure": 48.862,
+      "SkinThickness": 82.513,
+      "Insulin": 118.132,
+      "BMI": 70.58,
+      "DiabetesPedigreeFunction": 2.243,
+      "Age": 82
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-104",
+    "input": {
+      "Pregnancies": 14,
+      "Glucose": 100.141,
+      "BloodPressure": 97.388,
+      "SkinThickness": 75.852,
+      "Insulin": 290.832,
+      "BMI": 37.628,
+      "DiabetesPedigreeFunction": 0.3,
+      "Age": 20
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.2897428571428573,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-105",
+    "input": {
+      "Pregnancies": 6,
+      "Glucose": 202.852,
+      "BloodPressure": 70.225,
+      "SkinThickness": 46.631,
+      "Insulin": 510.513,
+      "BMI": 38.911,
+      "DiabetesPedigreeFunction": 0.926,
+      "Age": 79
+    },
+    "expected": {
+      "score": 0.7169512425470344,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.6849999999999999,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-106",
+    "input": {
+      "Pregnancies": 10,
+      "Glucose": 136.91,
+      "BloodPressure": 34.081,
+      "SkinThickness": 42.119,
+      "Insulin": 221.038,
+      "BMI": 23.477,
+      "DiabetesPedigreeFunction": 1.756,
+      "Age": 74
+    },
+    "expected": {
+      "score": 0.7184995632228252,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.6597142857142858,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-107",
+    "input": {
+      "Pregnancies": 10,
+      "Glucose": 65.137,
+      "BloodPressure": 74.844,
+      "SkinThickness": 106.996,
+      "Insulin": 308.953,
+      "BMI": 55.482,
+      "DiabetesPedigreeFunction": 1.858,
+      "Age": 67
+    },
+    "expected": {
+      "score": 0.5013969300409788,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.9895999999999996,
+        "Medium": 0.0,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-108",
+    "input": {
+      "Pregnancies": 4,
+      "Glucose": 99.536,
+      "BloodPressure": 131.92,
+      "SkinThickness": 67.196,
+      "Insulin": 452.848,
+      "BMI": 49.998,
+      "DiabetesPedigreeFunction": 0.294,
+      "Age": 30
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 1.0,
+        "Medium": 0.2724571428571429,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-109",
+    "input": {
+      "Pregnancies": 10,
+      "Glucose": 66.017,
+      "BloodPressure": 57.672,
+      "SkinThickness": 28.474,
+      "Insulin": 400.435,
+      "BMI": 22.866,
+      "DiabetesPedigreeFunction": 0.391,
+      "Age": 71
+    },
+    "expected": {
+      "score": 0.4905037011541273,
+      "model_class": 0,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.5449999999999999,
+        "Medium": 0.40942857142857136,
+        "High": 0.502175
+      }
+    }
+  },
+  {
+    "id": "synthetic-110",
+    "input": {
+      "Pregnancies": 0,
+      "Glucose": 123.738,
+      "BloodPressure": 14.376,
+      "SkinThickness": 91.682,
+      "Insulin": 400.014,
+      "BMI": 6.051,
+      "DiabetesPedigreeFunction": 1.002,
+      "Age": 42
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.4666666666666667,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-111",
+    "input": {
+      "Pregnancies": 13,
+      "Glucose": 153.134,
+      "BloodPressure": 116.488,
+      "SkinThickness": 28.35,
+      "Insulin": 665.927,
+      "BMI": 31.373,
+      "DiabetesPedigreeFunction": 0.771,
+      "Age": 45
+    },
+    "expected": {
+      "score": 0.6500008096325469,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.6666666666666666,
+        "High": 0.4377999999999995
+      }
+    }
+  },
+  {
+    "id": "synthetic-112",
+    "input": {
+      "Pregnancies": 3,
+      "Glucose": 128.994,
+      "BloodPressure": 5.258,
+      "SkinThickness": 24.253,
+      "Insulin": 629.45,
+      "BMI": 53.73,
+      "DiabetesPedigreeFunction": 1.976,
+      "Age": 52
+    },
+    "expected": {
+      "score": 0.7092374859066538,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.8858857142857143,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-113",
+    "input": {
+      "Pregnancies": 15,
+      "Glucose": 139.921,
+      "BloodPressure": 24.057,
+      "SkinThickness": 12.064,
+      "Insulin": 347.261,
+      "BMI": 45.515,
+      "DiabetesPedigreeFunction": 1.676,
+      "Age": 52
+    },
+    "expected": {
+      "score": 0.7096487200091839,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.8666666666666667,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-114",
+    "input": {
+      "Pregnancies": 10,
+      "Glucose": 64.302,
+      "BloodPressure": 76.467,
+      "SkinThickness": 106.815,
+      "Insulin": 624.553,
+      "BMI": 26.725,
+      "DiabetesPedigreeFunction": 2.398,
+      "Age": 39
+    },
+    "expected": {
+      "score": 0.29926997138289363,
+      "model_class": 0,
+      "band": "Low",
+      "strengths": {
+        "Low": 0.9022000000000001,
+        "Medium": 0.9022000000000001,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-115",
+    "input": {
+      "Pregnancies": 9,
+      "Glucose": 8.827,
+      "BloodPressure": 87.346,
+      "SkinThickness": 22.298,
+      "Insulin": 153.681,
+      "BMI": 32.858,
+      "DiabetesPedigreeFunction": 1.509,
+      "Age": 56
+    },
+    "expected": {
+      "score": 0.6055674305761873,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.17693333333333308,
+        "Medium": 0.6,
+        "High": 0.5715999999999994
+      }
+    }
+  },
+  {
+    "id": "synthetic-116",
+    "input": {
+      "Pregnancies": 6,
+      "Glucose": 104.851,
+      "BloodPressure": 9.225,
+      "SkinThickness": 34.477,
+      "Insulin": 33.509,
+      "BMI": 45.15,
+      "DiabetesPedigreeFunction": 0.877,
+      "Age": 44
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.6,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-117",
+    "input": {
+      "Pregnancies": 7,
+      "Glucose": 206.661,
+      "BloodPressure": 88.492,
+      "SkinThickness": 59.301,
+      "Insulin": 746.629,
+      "BMI": 71.035,
+      "DiabetesPedigreeFunction": 0.742,
+      "Age": 73
+    },
+    "expected": {
+      "score": 0.7544332035973518,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.33389999999999986,
+        "High": 1.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-118",
+    "input": {
+      "Pregnancies": 16,
+      "Glucose": 106.759,
+      "BloodPressure": 116.603,
+      "SkinThickness": 39.229,
+      "Insulin": 351.191,
+      "BMI": 17.321,
+      "DiabetesPedigreeFunction": 1.095,
+      "Age": 54
+    },
+    "expected": {
+      "score": 0.5,
+      "model_class": 1,
+      "band": "Medium",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.7333333333333333,
+        "High": 0.0
+      }
+    }
+  },
+  {
+    "id": "synthetic-119",
+    "input": {
+      "Pregnancies": 11,
+      "Glucose": 191.096,
+      "BloodPressure": 119.726,
+      "SkinThickness": 88.238,
+      "Insulin": 503.733,
+      "BMI": 28.965,
+      "DiabetesPedigreeFunction": 2.245,
+      "Age": 89
+    },
+    "expected": {
+      "score": 0.71507261474439,
+      "model_class": 1,
+      "band": "High",
+      "strengths": {
+        "Low": 0.0,
+        "Medium": 0.7192857142857143,
+        "High": 1.0
+      }
+    }
+  }
+]

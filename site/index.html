@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f6f7" />
+    <meta
+      name="description"
+      content="An educational fuzzy logic lab: explore 40 rules, inspect membership functions, and review transparent benchmark evaluation."
+    />
+    <title>FuzzyLab · Reasoning, made visible</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+      <a class="brand" href="./"
+        ><span class="brand-icon" aria-hidden="true">f<span>∿</span></span
+        ><span>Fuzzy<span class="brand-light">Lab</span></span></a
+      >
+      <nav aria-label="Lab sections">
+        <button data-tab="explorer" aria-current="page" class="nav active">
+          Explorer</button
+        ><button data-tab="rules" class="nav">Rule book <span>40</span></button
+        ><button data-tab="evaluation" class="nav">Evaluation</button>
+      </nav>
+      <a
+        class="source-link"
+        href="https://github.com/FaridKamal2004/fuzzy-diabetes-lab"
+        >View source ↗</a
+      >
+    </header>
+    <main id="main">
+      <div class="intro">
+        <div>
+          <p class="eyebrow">
+            <span></span> INTERPRETABLE AI / FUZZY INFERENCE
+          </p>
+          <h1>Reasoning, made <em>visible.</em></h1>
+          <p>
+            Go beyond an output. See the memberships, rules, and logic behind
+            it.
+          </p>
+        </div>
+        <div class="model-badge">
+          <span>MODEL v2.0</span><strong>8 inputs <i>·</i> 40 rules</strong
+          ><span>MAMDANI / CENTROID</span>
+        </div>
+      </div>
+      <aside class="notice">
+        <span aria-hidden="true">ⓘ</span>
+        <p>
+          <strong>An educational model, not a medical tool.</strong> Use
+          synthetic examples. Scores are not probabilities or diagnoses. This
+          model is not clinically validated.
+        </p>
+        <a href="#model-notes">Model notes ↓</a>
+      </aside>
+      <section id="explorer" aria-labelledby="explorer-heading">
+        <h2 class="sr-only" id="explorer-heading">
+          Interactive fuzzy inference explorer
+        </h2>
+        <div class="workspace">
+          <section class="input-panel" aria-labelledby="input-heading">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">01 / INPUT SPACE</p>
+                <h2 id="input-heading">Set the scenario.</h2>
+              </div>
+              <span class="tiny-label">SYNTHETIC</span>
+            </div>
+            <p class="panel-description">
+              Start with an example, then change a value.
+            </p>
+            <div class="presets" role="group" aria-label="Synthetic examples">
+              <button data-preset="low">Lower</button
+              ><button data-preset="middle" class="selected">Middle</button
+              ><button data-preset="high">Higher</button>
+            </div>
+            <form id="input-form">
+              <div id="fields" class="fields"></div>
+              <button class="primary" type="submit">
+                Explore the reasoning <span>↗</span>
+              </button>
+            </form>
+            <div class="edge-cases">
+              <span>TEST THE BOUNDARIES</span
+              ><button id="missing-example">Missing value ↗</button
+              ><button id="gap-example">Coverage gap ↗</button>
+            </div>
+            <p class="privacy-note">
+              Runs in your browser. No inputs are saved or sent to a model
+              server.
+            </p>
+          </section>
+          <div class="results-panel">
+            <section class="score-card" aria-labelledby="result-heading">
+              <div>
+                <p class="eyebrow">02 / MODEL OUTPUT</p>
+                <h2 id="result-heading">A transparent model score.</h2>
+                <p id="score-description">Centroid of the aggregated output.</p>
+                <div class="result-tags">
+                  <span id="result-band">Medium model band</span
+                  ><span id="result-class">Threshold class 1</span>
+                </div>
+              </div>
+              <div class="score-number">
+                <output id="score" aria-live="polite">0.500</output
+                ><span>MODEL SCORE / 0–1</span>
+              </div>
+            </section>
+            <div id="inference-error" class="error-panel" role="alert" hidden>
+              <h3>No score produced.</h3>
+              <p id="error-message"></p>
+              <span
+                >Abstention is an explicit result, not a negative
+                prediction.</span
+              >
+            </div>
+            <section class="chart-panel" aria-labelledby="chart-heading">
+              <div class="chart-heading">
+                <div>
+                  <p class="eyebrow">03 / DEFUZZIFICATION</p>
+                  <h2 id="chart-heading">From fuzzy sets to one score.</h2>
+                </div>
+                <span class="tiny-label">MAX–MIN AGGREGATION</span>
+              </div>
+              <div class="legend">
+                <span class="legend-low">Low</span
+                ><span class="legend-medium">Medium</span
+                ><span class="legend-high">High</span
+                ><span class="legend-area">Aggregated</span>
+              </div>
+              <div id="output-chart" class="output-chart"></div>
+              <div class="chart-foot">
+                <span>OUTPUT UNIVERSE / MODEL SCORE</span
+                ><span>Exact piecewise-linear centroid</span>
+              </div>
+            </section>
+            <section
+              class="activation-panel"
+              aria-labelledby="activation-heading"
+            >
+              <div class="activation-heading">
+                <div>
+                  <p class="eyebrow">04 / RULE TRACE</p>
+                  <h2 id="activation-heading">Follow the rules that fired.</h2>
+                </div>
+                <span id="activation-count" class="tiny-label"></span>
+              </div>
+              <div id="activations"></div>
+              <button id="inspect-rules" class="text-button">
+                Inspect all 40 rules ↗
+              </button>
+            </section>
+          </div>
+        </div>
+        <section class="membership-section">
+          <div>
+            <p class="eyebrow">LOOK A LITTLE CLOSER</p>
+            <h2>How does an input belong?</h2>
+            <p>
+              A value can belong to more than one set. Membership degree is not
+              probability.
+            </p>
+          </div>
+          <div>
+            <label for="feature-select">Inspect a feature</label
+            ><select id="feature-select"></select>
+          </div>
+          <div id="membership-chart"></div>
+        </section>
+      </section>
+      <section id="rules" hidden aria-labelledby="rules-heading">
+        <div class="view-heading">
+          <div>
+            <p class="eyebrow">THE MODEL, IN PLAIN SIGHT</p>
+            <h2 id="rules-heading">The complete rule book.</h2>
+            <p>
+              All 40 original AND rules. Strength is the minimum input
+              membership; each output uses the strongest rule.
+            </p>
+          </div>
+        </div>
+        <div class="rule-toolbar">
+          <label for="rule-search" class="sr-only">Search rules</label
+          ><input
+            id="rule-search"
+            type="search"
+            placeholder="Search by input, rule ID, or output…"
+          /><label
+            ><input type="checkbox" id="active-only" /> Show active rules
+            only</label
+          >
+        </div>
+        <p id="rule-summary" role="status"></p>
+        <div
+          class="table-scroll"
+          tabindex="0"
+          role="region"
+          aria-label="Scrollable fuzzy rule table"
+        >
+          <table>
+            <caption class="sr-only">
+              Fuzzy rules and their activation in the current scenario
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Rule</th>
+                <th scope="col">If all of these match</th>
+                <th scope="col">Then</th>
+                <th scope="col">Strength</th>
+              </tr>
+            </thead>
+            <tbody id="rule-table"></tbody>
+          </table>
+        </div>
+      </section>
+      <section id="evaluation" hidden aria-labelledby="evaluation-heading">
+        <div class="view-heading">
+          <div>
+            <p class="eyebrow">MEASURE WHAT THE MODEL ACTUALLY DOES</p>
+            <h2 id="evaluation-heading">Evidence, with its limits.</h2>
+            <p>
+              A fixed-rule benchmark evaluation. Imputation is fitted only on
+              the training partition; the original rule design already used the
+              dataset.
+            </p>
+          </div>
+        </div>
+        <div class="evaluation-meta" id="evaluation-meta"></div>
+        <div
+          class="evaluation-toggle"
+          role="group"
+          aria-label="Evaluation policy"
+        >
+          <button class="selected" data-policy="holdout_imputed">
+            Training-median imputation</button
+          ><button data-policy="holdout_strict">
+            Strict / abstain on missing
+          </button>
+        </div>
+        <div id="metric-cards" class="metric-cards"></div>
+        <div class="evaluation-grid">
+          <section class="evaluation-card">
+            <p class="eyebrow">PREDICTIONS VS DATASET LABELS</p>
+            <h3>Confusion matrix.</h3>
+            <p>
+              Scored records only; positive class is the dataset’s Outcome=1
+              label.
+            </p>
+            <div id="confusion-matrix" class="confusion-matrix"></div>
+          </section>
+          <section class="evaluation-card">
+            <p class="eyebrow">THE DENOMINATOR MATTERS</p>
+            <h3>Coverage is part of the result.</h3>
+            <div id="coverage-detail"></div>
+            <p>
+              Conditional accuracy describes scored records only. Abstained
+              records remain in the attempted count, and are not treated as
+              correct.
+            </p>
+          </section>
+        </div>
+        <div class="evaluation-card report-note">
+          <h3>No claim of improved clinical performance.</h3>
+          <p id="evaluation-note"></p>
+          <a
+            href="https://github.com/FaridKamal2004/fuzzy-diabetes-lab/blob/main/reports/evaluation.json"
+            >Read the complete evaluation JSON ↗</a
+          >
+        </div>
+      </section>
+      <section id="model-notes" class="model-notes">
+        <span class="notes-icon" aria-hidden="true">∿</span>
+        <div>
+          <p class="eyebrow">A STRONGER PROJECT STARTS WITH CLEAR BOUNDARIES</p>
+          <h2>Explainable doesn’t mean validated.</h2>
+          <p>
+            This lab retains the coursework’s membership shapes and 40 rules. It
+            improves engineering, error handling, reproducibility, and
+            evaluation transparency. It does not establish medical validity or
+            generalize to every population. Raw benchmark records are not
+            published here.
+          </p>
+          <p>
+            Band labels use 0.4 and 0.6; the separate binary demonstration
+            threshold is 0.5. Ties within 10⁻¹² of 0.5 use class 1. Missing
+            zero-valued measurements and uncovered rule combinations produce an
+            explicit abstention in the explorer.
+          </p>
+        </div>
+        <a
+          href="https://github.com/FaridKamal2004/fuzzy-diabetes-lab/blob/main/docs/MODEL_CARD.md"
+          >Read the model card ↗</a
+        >
+      </section>
+    </main>
+    <footer>
+      <span>FUZZYLAB / PYTHON + BROWSER</span>
+      <p>
+        Independent coursework enhancement · Synthetic exploration · Developed
+        with AI assistance
+      </p>
+      <a
+        href="https://github.com/FaridKamal2004/fuzzy-diabetes-lab/blob/main/docs/INTERVIEW.md"
+        >Interview walkthrough ↗</a
+      >
+    </footer>
+    <noscript
+      ><p class="noscript">
+        Enable JavaScript to use the rule explorer. The Python source and model
+        documentation remain available on GitHub.
+      </p></noscript
+    >
+  </body>
+</html>

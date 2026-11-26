@@ -1,0 +1,820 @@
+{
+  "version": "2.0.0",
+  "threshold": 0.5,
+  "threshold_tolerance": 1e-12,
+  "features": {
+    "Pregnancies": {
+      "label": "Pregnancies",
+      "unit": "count",
+      "min": 0,
+      "max": 17,
+      "step": 1,
+      "terms": {
+        "None": [
+          0,
+          0,
+          1,
+          2
+        ],
+        "Few": [
+          1,
+          4,
+          7
+        ],
+        "Many": [
+          5,
+          8,
+          17,
+          17
+        ]
+      },
+      "zero_missing": false
+    },
+    "Glucose": {
+      "label": "Glucose",
+      "unit": "mg/dL",
+      "min": 0,
+      "max": 210,
+      "step": 1,
+      "terms": {
+        "Low": [
+          0,
+          0,
+          70,
+          100
+        ],
+        "Medium": [
+          90,
+          125,
+          160
+        ],
+        "High": [
+          140,
+          170,
+          200,
+          210
+        ]
+      },
+      "zero_missing": true
+    },
+    "BloodPressure": {
+      "label": "Diastolic pressure",
+      "unit": "mm Hg",
+      "min": 0,
+      "max": 140,
+      "step": 1,
+      "terms": {
+        "Low": [
+          0,
+          0,
+          50,
+          65
+        ],
+        "Normal": [
+          60,
+          75,
+          90
+        ],
+        "High": [
+          85,
+          100,
+          130,
+          140
+        ]
+      },
+      "zero_missing": true
+    },
+    "SkinThickness": {
+      "label": "Skin thickness",
+      "unit": "mm",
+      "min": 0,
+      "max": 110,
+      "step": 1,
+      "terms": {
+        "Thin": [
+          0,
+          0,
+          10,
+          20
+        ],
+        "Normal": [
+          15,
+          30,
+          45
+        ],
+        "Thick": [
+          40,
+          55,
+          100,
+          110
+        ]
+      },
+      "zero_missing": true
+    },
+    "Insulin": {
+      "label": "Insulin",
+      "unit": "µU/mL",
+      "min": 0,
+      "max": 900,
+      "step": 1,
+      "terms": {
+        "Low": [
+          0,
+          0,
+          50,
+          100
+        ],
+        "Medium": [
+          80,
+          200,
+          320
+        ],
+        "High": [
+          300,
+          500,
+          850,
+          900
+        ]
+      },
+      "zero_missing": true
+    },
+    "BMI": {
+      "label": "BMI",
+      "unit": "kg/m²",
+      "min": 0,
+      "max": 75,
+      "step": 0.1,
+      "terms": {
+        "Low": [
+          0,
+          0,
+          18,
+          22
+        ],
+        "Medium": [
+          20,
+          27,
+          34
+        ],
+        "High": [
+          30,
+          35,
+          70,
+          75
+        ]
+      },
+      "zero_missing": true
+    },
+    "DiabetesPedigreeFunction": {
+      "label": "Pedigree function",
+      "unit": "index",
+      "min": 0,
+      "max": 2.6,
+      "step": 0.001,
+      "terms": {
+        "Low": [
+          0.0,
+          0.0,
+          0.3,
+          0.5
+        ],
+        "Medium": [
+          0.4,
+          0.8,
+          1.2
+        ],
+        "High": [
+          1.0,
+          1.5,
+          2.5,
+          2.6
+        ]
+      },
+      "zero_missing": false
+    },
+    "Age": {
+      "label": "Age",
+      "unit": "years",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "terms": {
+        "Young": [
+          20,
+          20,
+          30,
+          40
+        ],
+        "Middle": [
+          35,
+          50,
+          65
+        ],
+        "Old": [
+          60,
+          70,
+          100,
+          100
+        ]
+      },
+      "zero_missing": false
+    }
+  },
+  "output": {
+    "Low": [
+      0.0,
+      0.0,
+      0.2,
+      0.4
+    ],
+    "Medium": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "High": [
+      0.6,
+      0.8,
+      1.0,
+      1.0
+    ]
+  },
+  "rules": [
+    {
+      "id": "R01",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "High"
+        },
+        {
+          "feature": "BMI",
+          "term": "High"
+        }
+      ],
+      "then": "High"
+    },
+    {
+      "id": "R02",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "High"
+        },
+        {
+          "feature": "Age",
+          "term": "Old"
+        }
+      ],
+      "then": "High"
+    },
+    {
+      "id": "R03",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "High"
+        },
+        {
+          "feature": "Insulin",
+          "term": "High"
+        }
+      ],
+      "then": "High"
+    },
+    {
+      "id": "R04",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "High"
+        },
+        {
+          "feature": "DiabetesPedigreeFunction",
+          "term": "High"
+        }
+      ],
+      "then": "High"
+    },
+    {
+      "id": "R05",
+      "if": [
+        {
+          "feature": "Pregnancies",
+          "term": "Many"
+        },
+        {
+          "feature": "Glucose",
+          "term": "High"
+        }
+      ],
+      "then": "High"
+    },
+    {
+      "id": "R06",
+      "if": [
+        {
+          "feature": "BMI",
+          "term": "High"
+        },
+        {
+          "feature": "DiabetesPedigreeFunction",
+          "term": "High"
+        }
+      ],
+      "then": "High"
+    },
+    {
+      "id": "R07",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "High"
+        },
+        {
+          "feature": "Age",
+          "term": "Middle"
+        },
+        {
+          "feature": "BMI",
+          "term": "High"
+        }
+      ],
+      "then": "High"
+    },
+    {
+      "id": "R08",
+      "if": [
+        {
+          "feature": "BloodPressure",
+          "term": "High"
+        },
+        {
+          "feature": "BMI",
+          "term": "High"
+        }
+      ],
+      "then": "High"
+    },
+    {
+      "id": "R09",
+      "if": [
+        {
+          "feature": "Insulin",
+          "term": "High"
+        },
+        {
+          "feature": "Age",
+          "term": "Old"
+        }
+      ],
+      "then": "High"
+    },
+    {
+      "id": "R10",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "High"
+        },
+        {
+          "feature": "SkinThickness",
+          "term": "Thick"
+        },
+        {
+          "feature": "Insulin",
+          "term": "High"
+        }
+      ],
+      "then": "High"
+    },
+    {
+      "id": "R11",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "High"
+        },
+        {
+          "feature": "BMI",
+          "term": "High"
+        },
+        {
+          "feature": "Pregnancies",
+          "term": "Many"
+        }
+      ],
+      "then": "High"
+    },
+    {
+      "id": "R12",
+      "if": [
+        {
+          "feature": "DiabetesPedigreeFunction",
+          "term": "High"
+        },
+        {
+          "feature": "Age",
+          "term": "Old"
+        }
+      ],
+      "then": "High"
+    },
+    {
+      "id": "R13",
+      "if": [
+        {
+          "feature": "BMI",
+          "term": "High"
+        },
+        {
+          "feature": "SkinThickness",
+          "term": "Thick"
+        }
+      ],
+      "then": "High"
+    },
+    {
+      "id": "R14",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "Medium"
+        },
+        {
+          "feature": "BMI",
+          "term": "Medium"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R15",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "Medium"
+        },
+        {
+          "feature": "Age",
+          "term": "Middle"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R16",
+      "if": [
+        {
+          "feature": "BMI",
+          "term": "Medium"
+        },
+        {
+          "feature": "DiabetesPedigreeFunction",
+          "term": "Medium"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R17",
+      "if": [
+        {
+          "feature": "Pregnancies",
+          "term": "Few"
+        },
+        {
+          "feature": "Glucose",
+          "term": "Medium"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R18",
+      "if": [
+        {
+          "feature": "Insulin",
+          "term": "Medium"
+        },
+        {
+          "feature": "Glucose",
+          "term": "Medium"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R19",
+      "if": [
+        {
+          "feature": "BloodPressure",
+          "term": "Normal"
+        },
+        {
+          "feature": "BMI",
+          "term": "Medium"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R20",
+      "if": [
+        {
+          "feature": "Age",
+          "term": "Middle"
+        },
+        {
+          "feature": "DiabetesPedigreeFunction",
+          "term": "Medium"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R21",
+      "if": [
+        {
+          "feature": "SkinThickness",
+          "term": "Normal"
+        },
+        {
+          "feature": "BMI",
+          "term": "Medium"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R22",
+      "if": [
+        {
+          "feature": "BloodPressure",
+          "term": "High"
+        },
+        {
+          "feature": "Glucose",
+          "term": "Medium"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R23",
+      "if": [
+        {
+          "feature": "Pregnancies",
+          "term": "Many"
+        },
+        {
+          "feature": "Age",
+          "term": "Middle"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R24",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "Medium"
+        },
+        {
+          "feature": "DiabetesPedigreeFunction",
+          "term": "High"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R25",
+      "if": [
+        {
+          "feature": "Insulin",
+          "term": "Medium"
+        },
+        {
+          "feature": "BMI",
+          "term": "Medium"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R26",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "High"
+        },
+        {
+          "feature": "DiabetesPedigreeFunction",
+          "term": "Medium"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R27",
+      "if": [
+        {
+          "feature": "SkinThickness",
+          "term": "Thick"
+        },
+        {
+          "feature": "BMI",
+          "term": "Medium"
+        }
+      ],
+      "then": "Medium"
+    },
+    {
+      "id": "R28",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "Low"
+        },
+        {
+          "feature": "BMI",
+          "term": "Low"
+        }
+      ],
+      "then": "Low"
+    },
+    {
+      "id": "R29",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "Low"
+        },
+        {
+          "feature": "Age",
+          "term": "Young"
+        }
+      ],
+      "then": "Low"
+    },
+    {
+      "id": "R30",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "Low"
+        },
+        {
+          "feature": "DiabetesPedigreeFunction",
+          "term": "Low"
+        }
+      ],
+      "then": "Low"
+    },
+    {
+      "id": "R31",
+      "if": [
+        {
+          "feature": "Pregnancies",
+          "term": "None"
+        },
+        {
+          "feature": "Glucose",
+          "term": "Low"
+        }
+      ],
+      "then": "Low"
+    },
+    {
+      "id": "R32",
+      "if": [
+        {
+          "feature": "BloodPressure",
+          "term": "Normal"
+        },
+        {
+          "feature": "Glucose",
+          "term": "Low"
+        }
+      ],
+      "then": "Low"
+    },
+    {
+      "id": "R33",
+      "if": [
+        {
+          "feature": "BMI",
+          "term": "Low"
+        },
+        {
+          "feature": "SkinThickness",
+          "term": "Thin"
+        }
+      ],
+      "then": "Low"
+    },
+    {
+      "id": "R34",
+      "if": [
+        {
+          "feature": "Insulin",
+          "term": "Low"
+        },
+        {
+          "feature": "Glucose",
+          "term": "Low"
+        }
+      ],
+      "then": "Low"
+    },
+    {
+      "id": "R35",
+      "if": [
+        {
+          "feature": "DiabetesPedigreeFunction",
+          "term": "Low"
+        },
+        {
+          "feature": "Age",
+          "term": "Young"
+        }
+      ],
+      "then": "Low"
+    },
+    {
+      "id": "R36",
+      "if": [
+        {
+          "feature": "Insulin",
+          "term": "Low"
+        },
+        {
+          "feature": "BMI",
+          "term": "Low"
+        }
+      ],
+      "then": "Low"
+    },
+    {
+      "id": "R37",
+      "if": [
+        {
+          "feature": "Pregnancies",
+          "term": "None"
+        },
+        {
+          "feature": "DiabetesPedigreeFunction",
+          "term": "Low"
+        },
+        {
+          "feature": "Glucose",
+          "term": "Low"
+        }
+      ],
+      "then": "Low"
+    },
+    {
+      "id": "R38",
+      "if": [
+        {
+          "feature": "Age",
+          "term": "Young"
+        },
+        {
+          "feature": "BMI",
+          "term": "Low"
+        }
+      ],
+      "then": "Low"
+    },
+    {
+      "id": "R39",
+      "if": [
+        {
+          "feature": "Glucose",
+          "term": "Low"
+        },
+        {
+          "feature": "SkinThickness",
+          "term": "Thin"
+        }
+      ],
+      "then": "Low"
+    },
+    {
+      "id": "R40",
+      "if": [
+        {
+          "feature": "BloodPressure",
+          "term": "Low"
+        },
+        {
+          "feature": "Glucose",
+          "term": "Low"
+        }
+      ],
+      "then": "Low"
+    }
+  ]
+}

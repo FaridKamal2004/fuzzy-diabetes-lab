@@ -1,0 +1,8 @@
+{
+  "source": "User-supplied original classification export; not a new evaluation",
+  "rows": 768,
+  "scored": 768,
+  "correct_as_exported": 558,
+  "near_threshold_1e_12": 147,
+  "threshold_disagreements_after_canonical_ties": 115
+}
